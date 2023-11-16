@@ -39,7 +39,7 @@ namespace Net.Codecrete.QrCodeGenerator
             }
 
             // create bitmap
-            SKBitmap bitmap = new SKBitmap(dim, dim, SKColorType.Rgb888x, SKAlphaType.Opaque);
+            SKBitmap bitmap = new SKBitmap(dim, dim, SKColorType.Alpha8, SKAlphaType.Premul);
 
             using (SKCanvas canvas = new SKCanvas(bitmap))
             {

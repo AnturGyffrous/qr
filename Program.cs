@@ -1,6 +1,7 @@
 ﻿using System.Text;
 
 using Net.Codecrete.QrCodeGenerator;
+using SkiaSharp;
 
 if (args.Length != 2)
 {
@@ -24,7 +25,7 @@ var qr = QrCode.EncodeText(args[0], QrCode.Ecc.Medium);
 switch (extension.ToUpper())
 {
     case ".PNG":
-        qr.SaveAsPng(filename, scale: 10, border: 4);
+        qr.SaveAsPng(filename, scale: 10, border: 4, foreground: SKColors.Black, background: SKColors.White.WithAlpha(0x00));
         break;
     default:
         string svg = qr.ToSvgString(4);
