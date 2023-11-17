@@ -6,6 +6,11 @@ using SkiaSharp;
 if (args.Length != 2)
 {
     Console.WriteLine("Usage: qr text filename");
+    Console.WriteLine();
+    Console.WriteLine("  Examples:");
+    Console.WriteLine("    qr 'Hello, World!' hello-world-qr.svg");
+    Console.WriteLine("    qr 12345 12345.svg");
+    Console.WriteLine("    qr 'https://www.google.com/' google.png");
     return;
 }
 
